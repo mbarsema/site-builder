@@ -2,20 +2,20 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 // import PropTypes from 'prop-types'
 
-export default function NewPage() {
+export default function TextInput() {
     const dispatch = useDispatch();
     const onDrag = (e) => {
         dispatch({
             type: 'DESIGNER_DRAG',
             payload: {
-                elementType: 'page'
+                elementType: 'TextInput'
             }
         });
     }
 
     return (
         <div draggable={ true } onDragStart={ onDrag }>
-            Add New Page
+            Text
         </div>
     )
 }

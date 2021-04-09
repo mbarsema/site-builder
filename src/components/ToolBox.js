@@ -3,7 +3,7 @@ import AccordionPanel from './Accordion/Panel';
 import AccordionItem from './Accordion/Item';
 import AccordionHeader from './Accordion/Header';
 import AccordionBody from './Accordion/Body';
-import NewPage from '../toolbox/Pages/New';
+import TextInput from '../toolbox/Form/TextInput';
 
 export default function ToolBox() {
     const [openPanels, setOpenPanels] = useState({
@@ -25,10 +25,10 @@ export default function ToolBox() {
                     forComponent='page'
                     onClick={ updatePanel } 
                    >
-                       Page
+                       Form
                     </AccordionHeader>
-                   <AccordionBody id='page' group='toolbox' isOpen={ openPanels.page }>
-                       <NewPage /> 
+                   <AccordionBody id='textInput' group='toolbox' isOpen={ openPanels.page }>
+                       <TextInput /> 
                    </AccordionBody>
                </AccordionItem>
            </AccordionPanel>
