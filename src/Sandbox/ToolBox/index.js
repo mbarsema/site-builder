@@ -40,7 +40,7 @@ export default function ToolBox() {
         <div id='toolbox' className='toolbox'>
            <AccordionPanel group='toolbox'>
                 { accordions.map(({ text, tools, type }) => (
-                    <AccordionItem>
+                    <AccordionItem key={ type }>
                         <AccordionHeader
                             isOpen={ openPanels[type] }
                             forComponent={ type }
@@ -49,7 +49,9 @@ export default function ToolBox() {
                             { text }
                         </AccordionHeader>
                         <AccordionBody id='widget' group='toolbox' isOpen={ openPanels.widget }>
-                            { tools.map((tool) => <ToolBoxItem { ...tool } /> )}
+                            { tools.map((tool) => (
+                                <ToolBoxItem key={ `${tool.elementType}-${tool.renderer}` } { ...tool } /> 
+                            ))}
                         </AccordionBody>
                     </AccordionItem>
                 ))}   

@@ -8,8 +8,6 @@ export default function Sandbox() {
     const onDrop = (e) => {
         e.preventDefault();
         if ( e.target.className == "workarea" ) {
-            // document.getElementById("demo").style.color = "";
-            // event.target.style.border = "";
             const data = e.dataTransfer.getData("Text");
             dispatch({
                 type: 'DESIGNER_DROP',
@@ -31,7 +29,7 @@ export default function Sandbox() {
     }
 
     return (
-        <div id='designer' className='designer'>
+        <div id='sandbox' className='sandbox'>
             <ToolBox />
             <WorkArea
                 onDrop={ onDrop }

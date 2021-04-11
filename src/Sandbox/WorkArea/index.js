@@ -6,11 +6,9 @@ import Factory from '../Factory';
 export default function WorkArea({ onDrop, onDragOver, onDragLeave }) {
     const { elements } = useSelector(state => {
         return {
-            elements: state.workarea.elements
+            elements: state.sandbox.elements
         };
     });
-
-    console.log('elements', elements);
 
     return (
         <div

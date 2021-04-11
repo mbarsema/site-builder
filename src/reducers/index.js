@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import WorkAreaReducer from './workarea';
 import ElementReducer from './element';
+import SandboxReducer from './sandbox';
 import SettingsReducer from './settings';
 
 export default combineReducers({
-    workarea: WorkAreaReducer,
     elements: ElementReducer,
+    sandbox: SandboxReducer,
     settings: SettingsReducer
 });

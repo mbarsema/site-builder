@@ -48,7 +48,7 @@ export function addDroppable(state) {
     };
 }
 
-export default function WorkAreaReducer(state = initialState, action) {
+export default function SandboxReducer(state = initialState, action) {
     const { type, payload } = action;
     const map = {
         'ADD_ELEMENT': addElement,
