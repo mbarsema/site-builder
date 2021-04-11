@@ -5,14 +5,14 @@ const initialState = {
     hasInteraction: false
 };
 
-export function createElement(element) {
-    return { ...element };
+export function createElement(element, index) {
+    return { ...element, index };
 }
 
 export function addElement(state, element) {
     return {
         ...state,
-        elements: [...state.elements, createElement(element)]
+        elements: [...state.elements, createElement(element, state.elements.length)]
     };
 }
 

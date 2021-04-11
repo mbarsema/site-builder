@@ -48,7 +48,7 @@ export default function ToolBox() {
                         >
                             { text }
                         </AccordionHeader>
-                        <AccordionBody id='widget' group='toolbox' isOpen={ openPanels.widget }>
+                        <AccordionBody id={ type } group='toolbox' isOpen={ openPanels[type] }>
                             { tools.map((tool) => (
                                 <ToolBoxItem key={ `${tool.elementType}-${tool.renderer}` } { ...tool } /> 
                             ))}
