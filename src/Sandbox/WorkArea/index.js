@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import Factory from '../renderer';
+import Factory from '../Factory';
 
 export default function WorkArea({ onDrop, onDragOver, onDragLeave }) {
     const { elements } = useSelector(state => {
@@ -9,6 +9,8 @@ export default function WorkArea({ onDrop, onDragOver, onDragLeave }) {
             elements: state.workarea.elements
         };
     });
+
+    console.log('elements', elements);
 
     return (
         <div

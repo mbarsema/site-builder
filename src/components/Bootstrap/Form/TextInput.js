@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Input from '../../../components/Form/Input';
+import Input from '../../../components/core/Form/Input';
 
 export function FloatingLabelInput({ children, name, label }) {
     return (

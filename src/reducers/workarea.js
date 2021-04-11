@@ -5,23 +5,21 @@ const initialState = {
     hasInteraction: false
 };
 
-export function createElement(elementType) {
-    return {
-        elementType
-    };
+export function createElement(element) {
+    return { ...element };
 }
 
-export function addElement(state, { elementType }) {
+export function addElement(state, element) {
     return {
         ...state,
         elements: [...state.elements, createElement(element)]
     };
 }
 
-export function addDraggable(state, { elementType }) {
+export function addDraggable(state, element) {
     return {
         ...state,
-        draggedElement: elementType
+        draggedElement: element
     };
 }
 
@@ -40,13 +38,13 @@ export function onExitWorkArea(state) {
 }
 
 export function addDroppable(state) {
-    const elementType = state.draggedElement;
+    const element = state.draggedElement;
 
     return {
         ...state,
         hasInteraction: false,
         draggedElement: null,
-        elements: [...state.elements, createElement(elementType)]
+        elements: [...state.elements, createElement(element)]
     };
 }
 

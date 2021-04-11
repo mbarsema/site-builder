@@ -1,10 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import MenuBar from './MenuBar';
 import ToolBox from './ToolBox';
 import WorkArea from './WorkArea';
 
-export default function Designer() {
+export default function Sandbox() {
     const dispatch = useDispatch();
     const onDrop = (e) => {
         e.preventDefault();
@@ -18,7 +17,6 @@ export default function Designer() {
                     data
                 }
             });
-            // e.target.appendChild(document.getElementById(data));
         }
     }
 
@@ -34,7 +32,6 @@ export default function Designer() {
 
     return (
         <div id='designer' className='designer'>
-            <MenuBar />
             <ToolBox />
             <WorkArea
                 onDrop={ onDrop }
