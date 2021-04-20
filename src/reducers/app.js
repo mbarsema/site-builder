@@ -1,5 +1,5 @@
 const initialState = {
-    layout: 'Blog'
+    isSandbox: false
 };
 
 export function setLayout(state, { layout }) {

@@ -1,14 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Layouts from './Layouts';
+import Engine from './Engine';
 import Sandbox from './Sandbox';
 
 export default function Designer() {
-    const { layout } = useSelector(state => {
+    const { isSandbox } = useSelector(state => {
         return {
-            layout: state.app.layout
+            isSandbox: state.app.isSandbox
         };
     });
 
-    return Layouts[layout] ? Layouts[layout]() : <Sandbox />;
+    return isSandbox ? <Sandbox /> : <Engine />;
 }
