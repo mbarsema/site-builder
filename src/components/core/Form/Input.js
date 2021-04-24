@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 export default function Input({ className, isDisabled, isReadOnly, isRequired, onChange, name, placeholder, value }) {
+    const [textValue, setValue] = useState(value);
+    
     const onTextChange = (e) => {
+        setValue(e.target.value);
         onChange(e.target.value);
     };
     
@@ -18,7 +21,7 @@ export default function Input({ className, isDisabled, isReadOnly, isRequired, o
             disabled={ isDisabled }
             readOnly={ isReadOnly }
             required={ isRequired }
-            value={ value }
+            value={ textValue }
         />
     );
 }

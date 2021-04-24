@@ -30,6 +30,36 @@ const initialState = {
             { elementType: 'Paragraph', children: 'Shankle tongue cow, rump ground round chicken turducken bacon pork belly porchetta picanha brisket turkey meatball shank. Landjaeger salami kielbasa, corned beef jowl turducken picanha andouille capicola leberkas. Bacon landjaeger shank corned beef sirloin shankle, pig tenderloin brisket. Ground round shoulder venison pancetta andouille tongue, ball tip salami drumstick chuck. Buffalo sausage doner, pork salami frankfurter alcatra beef spare ribs. Shoulder brisket short ribs pork, tri-tip chislic frankfurter ham hock pork chop pancetta strip steak pork loin hamburger sausage burgdoggen.' },
             { elementType: 'Paragraph', children: 'Shank salami t-bone sausage, corned beef buffalo alcatra short ribs venison pancetta burgdoggen chuck drumstick fatback. Salami biltong meatball shank frankfurter pancetta bacon bresaola doner. Tenderloin salami pastrami pork loin kielbasa tri-tip burgdoggen beef ribs spare ribs meatloaf porchetta ribeye shoulder jowl. Biltong pork loin frankfurter short ribs. Turkey turducken ham fatback ball tip leberkas jowl sausage kielbasa sirloin ham hock short ribs landjaeger. Biltong prosciutto ground round, ham hock jowl pork salami. Pancetta tenderloin doner swine, tongue tri-tip landjaeger pork chop meatball andouille pig tail.' }
         ]
+    },
+    {
+        elementType: 'Container',
+        variant: 'light',
+        children: [
+            {
+                elementType: 'TextInput',
+                label: 'Name',
+                labelType: 'float',
+                onChange: (value) => console.log(value),
+                placeholder: 'Name',
+                value: ''
+            },
+            {
+                elementType: 'TextInput',
+                label: 'Name',
+                labelType: 'top',
+                onChange: (value) => console.log(value),
+                placeholder: 'Name',
+                value: ''
+            },
+            {
+                elementType: 'TextInput',
+                label: 'Name',
+                labelType: 'left',
+                onChange: (value) => console.log(value),
+                placeholder: 'Name',
+                value: ''
+            }
+        ]
     }]
 };
 

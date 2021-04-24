@@ -1,6 +1,7 @@
 import { Brand, NavBar, NavItem, NavDropDown } from './core/Navigation';
 import Container from './core/Layout/Container';
 import Paragraph from './core/Text/Paragraph';
+import TextInput from './core/Form/TextInput';
 
 export default {
     Brand,
@@ -8,5 +9,6 @@ export default {
     NavBar,
     NavItem,
     NavDropDown,
-    Paragraph
+    Paragraph,
+    TextInput
 }
